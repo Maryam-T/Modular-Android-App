@@ -1,0 +1,3 @@
+package com.marand.presentation
+
+interface PresentationModel
