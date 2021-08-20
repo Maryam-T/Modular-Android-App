@@ -168,8 +168,6 @@ G
 remote/build.gradle.kts,5\0\50dc545d9a1f777dcfb0f5cf8eb8ce1cfb33bc07
 q
 Aremote/src/main/java/com/marand/remote/user/api/UserApiService.kt,5\7\57d9640f189a31a01970783ee0032a06b957cc9a
-Œ
-\presentation/src/main/java/com/marand/presentation/main/home/model/UserPresentationMapper.kt,c\1\c141aae8fef5a4164f9876c9bfb49df6e6c85d7e
 g
 7domain/src/main/java/com/marand/domain/UseCaseResult.kt,3\6\36a90b1e5ba9167de90a8ec2f560959e4d572e4f
 w
@@ -206,10 +204,6 @@ i
 9database/src/main/java/com/marand/database/AppDatabase.kt,4\6\46a3fc2c2d031e17bc18b6df9ac4e22cdf8a4ff4
 G
 domain/build.gradle.kts,d\7\d72c8b69b8da0b3b02b699ccd509295dbd783baa
-a
-1domain/src/main/java/com/marand/domain/UseCase.kt,f\9\f996877f9803d9785baa590f18f9c3f34c4ff545
-‹
-[presentation/src/test/java/com/marand/presentation/main/home/viewmodel/UserViewModelTest.kt,2\8\28135568a5ac59bb0c1389b87065632ab1f929dd
 m
 =remote/src/main/java/com/marand/remote/adapter/CallAdapter.kt,e\c\ecab47ef6cd69b81399638f47d1ab5fc5bd9d838
 i
@@ -222,8 +216,6 @@ r
 Bremote/src/main/java/com/marand/remote/response/ResponseWrapper.kt,3\9\396536b78c72a5b2aa15b2a1867d47bf19968fca
 s
 Cremote/src/main/java/com/marand/remote/adapter/SingleCallAdapter.kt,2\8\28a25b61d1ec50df83375214ed232ff4aac8d1b2
-R
-"buildSrc/src/main/java/Versions.kt,1\7\17cc39576120ea39e86f37255d0843f33952bb99
 Y
 )buildSrc/src/main/java/AppDependencies.kt,d\8\d8b31912fed46ee3cfaea3bdcd079318a32f7d12
 v
@@ -266,8 +258,6 @@ Uapp/src/main/java/com/marand/myapplication/di/layer/database/module/DatabaseMod
 `app/src/main/java/com/marand/myapplication/di/layer/presentation/scope/main/MainActivityScope.kt,5\b\5b1d5067debdbbfc3453858fea28bd88ed3b5915
 ‘
 aapp/src/main/java/com/marand/myapplication/di/layer/presentation/module/ActivityBuildersModule.kt,b\c\bca16b87a5c861f73429d5da6c5965ad7bb7c9e5
-‡
-Wpresentation/src/main/java/com/marand/presentation/main/home/viewmodel/UserViewModel.kt,9\5\9590affeab03e4d8493a2ff305334be42853d67a
 ˆ
 Xapp/src/main/java/com/marand/myapplication/di/layer/presentation/main/home/HomeModule.kt,0\6\067b1043b58dbbb6b016f110d4c225c3ce6fc984
 ˆ
