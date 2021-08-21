@@ -148,8 +148,6 @@ f
 6database/src/main/java/com/marand/database/Database.kt,0\6\066b283d8f87ef757d8e4d381336a370914f8897
 Ç
 Rpresentation/src/main/java/com/marand/presentation/main/home/model/UserItemView.kt,c\0\c0a45aa92f74c97207ba0b3072d65a93e2c68c7f
-i
-9domain/src/main/java/com/marand/domain/UseCaseResponse.kt,0\d\0d06d9c197f4e91e8ed6918a1091ce7da6923abc
 o
 ?remote/src/main/java/com/marand/remote/user/api/UserEndPoint.kt,b\0\b0c1c96a5ff5b8d6bbd4b41d714f22703760bbce
 m
@@ -176,8 +174,6 @@ Gpresentation/src/main/java/com/marand/presentation/AbstractViewModel.kt,a\b\ab
 Lapp/src/androidTest/java/com/marand/myapplication/ExampleInstrumentedTest.kt,b\c\bc6a51a66a8690120af6975a7fd717e649629c5a
 t
 Dremote/src/test/java/com/marand/remote/user/dto/UserDtoMapperTest.kt,2\4\24518eac6eaa1764cf908ddc97703cb5db078429
-É
-Spresentation/src/main/java/com/marand/presentation/main/home/viewmodel/UserState.kt,e\9\e94a70f4bad10d42b3e40fabfab8ec5961bd2164
 y
 Ipresentation/src/test/java/com/marand/presentation/factory/DataFactory.kt,b\4\b4340ad8836135a54ca117129054705657e018ba
 
@@ -208,8 +204,6 @@ m
 =remote/src/main/java/com/marand/remote/adapter/CallAdapter.kt,e\c\ecab47ef6cd69b81399638f47d1ab5fc5bd9d838
 i
 9remote/src/main/java/com/marand/remote/response/Result.kt,0\8\08188d0795865a935b46335be1e21a13b89b2107
-Å
-Qpresentation/src/main/java/com/marand/presentation/main/home/view/HomeFragment.kt,2\f\2fb074935a8a3f673d46d126a71b7a0e0a6711c5
 l
 <remote/src/main/java/com/marand/remote/AbstractApiService.kt,6\4\648b1ab6a7b872d1827873012fc5344c2aa72499
 r
@@ -218,8 +212,6 @@ s
 Cremote/src/main/java/com/marand/remote/adapter/SingleCallAdapter.kt,2\8\28a25b61d1ec50df83375214ed232ff4aac8d1b2
 Y
 )buildSrc/src/main/java/AppDependencies.kt,d\8\d8b31912fed46ee3cfaea3bdcd079318a32f7d12
-v
-Fpresentation/src/main/java/com/marand/presentation/AbstractFragment.kt,f\0\f0fbcaf16276964e5db0f7cc38c49f4b95d80ff9
 w
 Gpresentation/src/main/java/com/marand/presentation/main/MainActivity.kt,1\7\176b7f366c9dc93894ffa72a5bef1225ac547c82
 à
@@ -242,10 +234,6 @@ Vpresentation/src/androidTest/java/com/marand/presentation/testutil/CustomTestRu
 Vpresentation/src/androidTest/java/com/marand/presentation/testutil/TestAppComponent.kt,8\8\883ee46000487fec5261e7e4746e265b3fb75de2
 É
 Spresentation/src/androidTest/java/com/marand/presentation/testutil/TestAppModule.kt,4\d\4d87ef65fe9a61a2bdb920be5f6ceb36e012c2b2
-å
-\presentation/src/androidTest/java/com/marand/presentation/main/home/view/HomeFragmentTest.kt,1\2\12f926af90d451206296c8d79d2fb5eb61fbab82
-}
-Mpresentation/src/androidTest/java/com/marand/presentation/testutil/TestApp.kt,e\8\e857ccb3e111fbd1ab53a697089c2eeeef131d22
 ~
 Napp/src/main/java/com/marand/myapplication/di/global/component/AppComponent.kt,2\b\2b7c3167493f9434de04c340920505692ef6bbc8
 x
@@ -276,3 +264,15 @@ u
 Edatabase/src/androidTest/java/com/marand/database/post/PostDaoTest.kt,0\7\07bc0efc095d8f7bd8bc7a3907232df849d6725c
 z
 Jdata/src/main/java/com/marand/data/user/datasource/UserRemoteDataSource.kt,f\6\f647a36cbd7edfc1786eaf094c40b11e0d7e642f
+R
+"buildSrc/src/main/java/Versions.kt,1\7\17cc39576120ea39e86f37255d0843f33952bb99
+s
+Cdomain/src/test/java/com/marand/domain/factory/user/UsersFactory.kt,7\8\78ff082a95fb891f85aa6caa9986df5c26ee1ffd
+|
+Ldomain/src/main/java/com/marand/domain/user/interactor/GetUserListUseCase.kt,7\8\781d71687dc238dedc3222f35d807d041da83118
+x
+Hdomain/src/main/java/com/marand/domain/user/repository/UserRepository.kt,5\4\54ac9c8ea25cda1b4b9b13915461457984189e6b
+k
+;domain/src/test/java/com/marand/domain/MainCoroutineRule.kt,f\a\fae594e74057ab3c706b25beca9817a745d3751e
+å
+\presentation/src/main/java/com/marand/presentation/main/home/model/UserPresentationMapper.kt,c\1\c141aae8fef5a4164f9876c9bfb49df6e6c85d7e

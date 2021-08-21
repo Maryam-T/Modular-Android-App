@@ -9,15 +9,10 @@ import com.marand.domain.user.interactor.GetUserListUseCase
 import com.marand.presentation.factory.user.UsersFactory
 import com.marand.presentation.main.home.model.UserItemView
 import com.marand.presentation.main.home.model.UserPresentationMapper
-import com.nhaarman.mockito_kotlin.atLeastOnce
-import com.nhaarman.mockito_kotlin.mock
-import com.nhaarman.mockito_kotlin.verify
-import com.nhaarman.mockito_kotlin.whenever
+import io.mockk.coEvery
 import io.mockk.coVerify
-import junit.framework.TestCase.assertEquals
-import junit.framework.TestCase.assertTrue
+import io.mockk.mockk
 import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.test.runBlockingTest
 import org.junit.After
 import org.junit.Before
 import org.junit.Rule
@@ -32,16 +27,13 @@ class UserViewModelTest {
     @get:Rule
     var instantTaskExecutorRule = InstantTaskExecutorRule()
 
-    private val stateObserver = mock<Observer<UserState>>()
+    private val stateObserver = mockk<Observer<UserState>>(relaxed = true)
 
-    private val getUserListUseCase = mock<GetUserListUseCase>()
+    private val getUserListUseCase = mockk<GetUserListUseCase>(relaxed = true)
 
     private lateinit var userPresentationMapper: UserPresentationMapper
 
     private lateinit var userViewModel: UserViewModel
-
-//    private val receivedUserStates = mutableListOf<UserState>()
-
 
     @Before
     fun setUp() {
@@ -69,42 +61,19 @@ class UserViewModelTest {
         }
         stubFetchUsers(UseCaseResult(listOfUsers))
 
-//        observeViewModel(userViewModel)
-
-//        assertTrue(receivedUserStates.isEmpty())
-
         //Act
         userViewModel.fetchUserList()
 
-
-        /*assertEquals(
-            listOf(
-                UserState.Loading,
-                UserState.Success(listOfViews)
-            ),
-            receivedUserStates
-        )*/
-
         //Assert
-        coVerify { stateObserver.onChanged(UserState.Loading) }
-//        verify(stateObserver).onChanged(UserState.Loading)
+//        coVerify { stateObserver.onChanged(UserState.Init) }
+//        coVerify { stateObserver.onChanged(UserState.Loading) }
         coVerify { stateObserver.onChanged(UserState.Success(listOfViews)) }
-//        verify(stateObserver).onChanged(UserState.Success(listOfViews))
     }
 
     /**
      * Stub Helpers Methods
      */
-    private fun stubFetchUsers(response: UseCaseResult<List<UserEntity>>) = runBlockingTest {
-        whenever(getUserListUseCase.run(UseCase.None()))
-            .thenReturn(response)
+    private fun stubFetchUsers(response: UseCaseResult<List<UserEntity>>) {
+        coEvery { getUserListUseCase.run(UseCase.None()) } returns response
     }
-
-    /*private fun observeViewModel(viewModel: UserViewModel) {
-        viewModel.stateObservable.observeForever { userState ->
-            if (userState != null) {
-                receivedUserStates.add(userState)
-            }
-        }
-    }*/
 }
