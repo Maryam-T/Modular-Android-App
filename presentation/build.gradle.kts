@@ -2,7 +2,6 @@ plugins {
     id("com.android.library")
     kotlin("android")
     id("kotlin-kapt")
-    id("androidx.navigation.safeargs.kotlin")
     id("kotlin-android")
     id("kotlin-android-extensions")
 }
@@ -17,7 +16,7 @@ android {
         versionCode = AppConfig.versionCode
         versionName = AppConfig.versionName
 
-        testInstrumentationRunner = AppConfig.androidCustomTestInstrumentation
+        testInstrumentationRunner = AppConfig.androidTestInstrumentation
     }
     buildTypes {
         getByName("release") {
@@ -43,17 +42,12 @@ android {
         exclude("META-INF/AL2.0")
         exclude("META-INF/LGPL2.1")
     }
-    buildFeatures {
-        viewBinding = true
-    }
 }
 
 dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
     //Modules
     implementation(project(":domain"))
-    implementation("org.jetbrains.kotlin:kotlin-stdlib:${rootProject.extra["kotlin_version"]}")
-    implementation("androidx.legacy:legacy-support-v4:1.0.0")
     //Presentation compilers
     kapt(AppDependencies.presentationCompilers)
     //Presentation libs

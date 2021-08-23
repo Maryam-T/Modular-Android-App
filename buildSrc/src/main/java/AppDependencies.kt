@@ -28,10 +28,7 @@ object AppDependencies {
     //Dagger2
     private const val daggerGroupId = "com.google.dagger"
     private const val dagger = "$daggerGroupId:dagger:${Versions.daggerVersion}"
-    private const val daggerAndroid = "$daggerGroupId:dagger-android:${Versions.daggerVersion}"
     private const val daggerCompiler = "$daggerGroupId:dagger-compiler:${Versions.daggerVersion}"
-    private const val daggerAnnotation = "$daggerGroupId:dagger-android-processor:${Versions.daggerVersion}"
-    private const val daggerSupport = "$daggerGroupId:dagger-android-support:${Versions.daggerVersion}"
 
     //Database
     private const val roomKotlin = "androidx.room:room-ktx:${Versions.roomVersion}"
@@ -104,8 +101,6 @@ object AppDependencies {
         add(lifecycleLiveData)
         add(lifecycleRuntime)
         add(dagger)
-        add(daggerSupport)
-        add(daggerAndroid)
         add(mapStruct)
         add(mapStructAnnotation)
         add(multiDex)
@@ -123,7 +118,6 @@ object AppDependencies {
     val appCompilers = arrayListOf<String>().apply {
         add(glideCompiler)
         add(roomCompiler)
-        add(daggerAnnotation)
         add(daggerCompiler)
     }
 
@@ -131,18 +125,11 @@ object AppDependencies {
         add(kotlinStd)
         add(coreKtx)
         add(appcompat)
-        add(constraintLayout)
         add(material)
-        add(navigationUi)
-        add(navigation)
-        add(glide)
-        add(glideOkHttpIntegration)
         add(lifecycleViewModel)
         add(lifecycleLiveData)
         add(lifecycleRuntime)
         add(dagger)
-        add(daggerSupport)
-        add(daggerAndroid)
         add(mapStruct)
         add(mapStructAnnotation)
         add(multiDex)
@@ -151,8 +138,6 @@ object AppDependencies {
     }
 
     val presentationCompilers = arrayListOf<String>().apply {
-        add(glideCompiler)
-        add(daggerAnnotation)
         add(daggerCompiler)
     }
 
@@ -195,8 +180,6 @@ object AppDependencies {
         add(roomTest)
         add(gson)
         add(dagger)
-        add(daggerSupport)
-        add(daggerAndroid)
     }
 
     val databaseApi = arrayListOf<String>().apply {
@@ -205,7 +188,6 @@ object AppDependencies {
 
     val databaseCompilers = arrayListOf<String>().apply {
         add(roomCompiler)
-        add(daggerAnnotation)
         add(daggerCompiler)
     }
 
