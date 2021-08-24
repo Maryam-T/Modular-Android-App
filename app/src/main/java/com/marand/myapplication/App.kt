@@ -5,7 +5,7 @@ import android.content.Context
 import androidx.multidex.MultiDex
 import com.marand.myapplication.di.global.component.AppComponent
 import com.marand.myapplication.di.global.component.DaggerAppComponent
-import com.marand.myapplication.di.layer.presentation.main.MainComponent
+import com.marand.myapplication.di.layer.presentation.main.component.MainComponent
 
 class App : Application() {
 
@@ -25,7 +25,7 @@ class App : Application() {
     }
 
     fun mainComponent(): MainComponent {
-        if(mainComponent == null){
+        if (mainComponent == null) {
             mainComponent = appComponent.mainComponent().create()
         }
         return mainComponent as MainComponent

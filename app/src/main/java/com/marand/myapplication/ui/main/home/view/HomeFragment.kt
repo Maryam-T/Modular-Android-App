@@ -1,11 +1,13 @@
 package com.marand.myapplication.ui.main.home.view
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
+import com.marand.myapplication.App
 import com.marand.myapplication.databinding.FragmentHomeBinding
 import com.marand.myapplication.ui.AbstractFragment
 import com.marand.myapplication.ui.main.home.adapter.UserAdapter
@@ -22,6 +24,12 @@ class HomeFragment : AbstractFragment<FragmentHomeBinding>() {
 
     private val viewModel: UserViewModel by viewModels {
         viewModelProviderFactory
+    }
+
+    override fun onAttach(context: Context) {
+        (context.applicationContext as App).mainComponent()
+            .inject(this)
+        super.onAttach(context)
     }
 
     override fun createViewBinding(inflater: LayoutInflater): FragmentHomeBinding =
@@ -54,7 +62,7 @@ class HomeFragment : AbstractFragment<FragmentHomeBinding>() {
 
     private fun showUserListToUI(listOfUserItemView: List<UserItemView>) {
         hideLoading()
-        userAdapter = com.marand.myapplication.ui.main.home.adapter.UserAdapter(listOfUserItemView)
+        userAdapter = UserAdapter(listOfUserItemView)
         setRecyclerView()
     }
 

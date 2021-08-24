@@ -1,9 +1,10 @@
-package com.marand.myapplication.di.layer.presentation.main
+package com.marand.myapplication.di.layer.presentation.main.module
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.marand.myapplication.di.layer.presentation.main.factory.MainViewModelFactory
 import com.marand.myapplication.di.layer.presentation.main.key.MainViewModelKey
+import com.marand.myapplication.di.layer.presentation.main.scope.MainScope
 import com.marand.presentation.main.home.viewmodel.UserViewModel
 import com.marand.presentation.main.post.viewmodel.PostViewModel
 import dagger.Binds

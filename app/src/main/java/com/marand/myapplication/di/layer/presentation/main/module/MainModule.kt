@@ -1,4 +1,4 @@
-package com.marand.myapplication.di.layer.presentation.main
+package com.marand.myapplication.di.layer.presentation.main.module
 
 import com.marand.data.post.PostRepositoryImpl
 import com.marand.data.post.datasource.PostCacheDataSource
@@ -10,6 +10,7 @@ import com.marand.database.post.PostCacheDataSourceImpl
 import com.marand.database.post.PostDao
 import com.marand.domain.post.repository.PostRepository
 import com.marand.domain.user.repository.UserRepository
+import com.marand.myapplication.di.layer.presentation.main.scope.MainScope
 import com.marand.remote.post.api.PostApiService
 import com.marand.remote.user.api.UserApiService
 import dagger.Binds

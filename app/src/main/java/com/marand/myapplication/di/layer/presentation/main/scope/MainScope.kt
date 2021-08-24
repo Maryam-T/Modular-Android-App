@@ -1,4 +1,4 @@
-package com.marand.myapplication.di.layer.presentation.main
+package com.marand.myapplication.di.layer.presentation.main.scope
 
 import javax.inject.Scope
 

@@ -4,7 +4,7 @@ import android.app.Application
 import com.marand.myapplication.di.global.module.AppModule
 import com.marand.myapplication.di.global.module.SubComponentsModule
 import com.marand.myapplication.di.layer.database.module.DatabaseModule
-import com.marand.myapplication.di.layer.presentation.main.MainComponent
+import com.marand.myapplication.di.layer.presentation.main.component.MainComponent
 import com.marand.myapplication.di.layer.remote.module.RemoteModule
 import com.marand.myapplication.ui.AbstractActivity
 import dagger.BindsInstance

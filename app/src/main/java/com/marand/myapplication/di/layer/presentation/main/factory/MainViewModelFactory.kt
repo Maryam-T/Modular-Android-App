@@ -2,7 +2,7 @@ package com.marand.myapplication.di.layer.presentation.main.factory
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.marand.myapplication.di.layer.presentation.main.MainScope
+import com.marand.myapplication.di.layer.presentation.main.scope.MainScope
 import javax.inject.Inject
 import javax.inject.Provider
 
