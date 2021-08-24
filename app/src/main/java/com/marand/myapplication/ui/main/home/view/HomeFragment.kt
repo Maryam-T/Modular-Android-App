@@ -8,13 +8,14 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import com.marand.myapplication.databinding.FragmentHomeBinding
 import com.marand.myapplication.ui.AbstractFragment
+import com.marand.myapplication.ui.main.home.adapter.UserAdapter
 import com.marand.presentation.main.home.model.UserItemView
 import com.marand.presentation.main.home.viewmodel.UserState
 import com.marand.presentation.main.home.viewmodel.UserViewModel
 import javax.inject.Inject
 
 class HomeFragment : AbstractFragment<FragmentHomeBinding>() {
-    private lateinit var userAdapter: com.marand.myapplication.ui.main.home.adapter.UserAdapter
+    private lateinit var userAdapter: UserAdapter
 
     @Inject
     lateinit var viewModelProviderFactory: ViewModelProvider.Factory

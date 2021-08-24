@@ -7,13 +7,14 @@ import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import com.marand.myapplication.databinding.FragmentPostBinding
 import com.marand.myapplication.ui.AbstractFragment
+import com.marand.myapplication.ui.main.post.adapter.PostAdapter
 import com.marand.presentation.main.post.model.PostItemView
 import com.marand.presentation.main.post.viewmodel.PostState
 import com.marand.presentation.main.post.viewmodel.PostViewModel
 import javax.inject.Inject
 
 class PostFragment : AbstractFragment<FragmentPostBinding>() {
-    private lateinit var postAdapter: com.marand.myapplication.ui.main.post.adapter.PostAdapter
+    private lateinit var postAdapter: PostAdapter
     var userId: Int = 0
 
     @Inject
