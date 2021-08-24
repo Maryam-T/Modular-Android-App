@@ -8,7 +8,6 @@ import com.marand.myapplication.ui.AbstractActivity
 class MainActivity : AbstractActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
-//        inject()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
