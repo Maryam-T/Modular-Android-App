@@ -1,4 +1,4 @@
-package com.marand.presentation.factory
+package com.marand.myapplication.ui.factory
 
 import java.util.*
 import kotlin.random.Random

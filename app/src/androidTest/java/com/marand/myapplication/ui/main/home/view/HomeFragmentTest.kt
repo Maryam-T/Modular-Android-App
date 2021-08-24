@@ -1,9 +1,10 @@
-package com.marand.presentation.main.home.view
+package com.marand.myapplication.ui.main.home.view
 
 import androidx.fragment.app.testing.launchFragmentInContainer
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
+import androidx.test.annotation.UiThreadTest
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions.click
 import androidx.test.espresso.contrib.RecyclerViewActions
@@ -12,8 +13,8 @@ import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.LargeTest
 import androidx.test.rule.ActivityTestRule
 import com.google.common.truth.Truth.assertThat
-import com.marand.presentation.R
-import com.marand.presentation.factory.user.UsersFactoryAndroidTest
+import com.marand.myapplication.R
+import com.marand.myapplication.ui.factory.user.UsersFactoryAndroidTest
 import com.marand.myapplication.ui.main.MainActivity
 import com.marand.myapplication.ui.main.home.adapter.UserAdapter
 import org.junit.Rule
@@ -26,10 +27,11 @@ import org.mockito.Mockito.mock
 class HomeFragmentTest {
 
     @get:Rule
-    var activityTestRule = ActivityTestRule(com.marand.myapplication.ui.main.MainActivity::class.java, false, false)
+    var activityTestRule = ActivityTestRule(MainActivity::class.java, false, false)
 
-    private lateinit var userAdapter: com.marand.myapplication.ui.main.home.adapter.UserAdapter
+    private lateinit var userAdapter: UserAdapter
 
+    @UiThreadTest
     @Test
     fun clickUserItem_navigateToPostFragment() {
         //Arrange
@@ -52,19 +54,34 @@ class HomeFragmentTest {
 
     private fun launchHomeFragment(): NavController {
         val navController = mock(NavController::class.java)
-        val homeFragmentScenario = launchFragmentInContainer<com.marand.myapplication.ui.main.home.view.HomeFragment>()
 
+        /*val homeFragmentScenario = launchFragmentInContainer<HomeFragment>()
         homeFragmentScenario.onFragment { fragment ->
             navController.setGraph(R.navigation.nav_graph)
             Navigation.setViewNavController(fragment.requireView(), navController)
+        }*/
+
+        HomeFragment().also { fragment ->
+            // In addition to returning a new instance of our Fragment,
+            // get a callback whenever the fragment’s view is created
+            // or destroyed so that we can set the mock NavController
+            fragment.viewLifecycleOwnerLiveData.observeForever { viewLifecycleOwner ->
+                if (viewLifecycleOwner != null) {
+                    // The fragment’s view has just been created
+                    navController.setGraph(R.navigation.nav_graph)
+                    Navigation.setViewNavController(fragment.requireView(), navController)
+                }
+            }
         }
+
         return navController
     }
 
     private fun setUpRecyclerView() {
         val listOfUserItemView = UsersFactoryAndroidTest.generateListOfUserItemViews(5)
 
-        userAdapter = com.marand.myapplication.ui.main.home.adapter.UserAdapter(listOfUserItemView)
+        userAdapter = UserAdapter(listOfUserItemView)
+
         activityTestRule.activity.findViewById<RecyclerView>(R.id.userListRv).adapter = userAdapter
     }
 }

@@ -54,6 +54,4 @@ dependencies {
     implementation(AppDependencies.presentationLibraries)
     //Test libs
     testImplementation(AppDependencies.testLibraries)
-    androidTestImplementation(AppDependencies.androidTestLibraries)
-    debugImplementation(AppDependencies.debugLibraries)
 }

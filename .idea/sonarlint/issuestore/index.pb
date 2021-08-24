@@ -156,8 +156,6 @@ Opresentation/src/test/java/com/marand/presentation/factory/user/UsersFactory.kt
 apresentation/src/androidTest/java/com/marand/presentation/factory/user/UsersFactoryAndroidTest.kt,1\7\17e4e465d74a2a25f4cfcb60cb518b66d102087d
 ã
 [presentation/src/androidTest/java/com/marand/presentation/factory/DataFactoryAndroidTest.kt,4\1\41d7f4561815230d7571358eeac003ad6c314b7e
-å
-\presentation/src/androidTest/java/com/marand/presentation/main/post/view/PostFragmentTest.kt,2\d\2d4f6fd594a8f78ea0fb0031608d2b8634eedf87
 ê
 `presentation/src/test/java/com/marand/presentation/main/home/model/UserPresentationMapperTest.kt,9\6\96919df1f7ba80162b3e51165b67ac3562e504c1
 y
@@ -206,8 +204,6 @@ a
 1domain/src/main/java/com/marand/domain/UseCase.kt,f\9\f996877f9803d9785baa590f18f9c3f34c4ff545
 S
 #buildSrc/src/main/java/AppConfig.kt,a\f\afbe0c8e034c515e4cd2282931468bc45a8cbd10
-å
-\presentation/src/androidTest/java/com/marand/presentation/main/home/view/HomeFragmentTest.kt,1\2\12f926af90d451206296c8d79d2fb5eb61fbab82
 Å
 Qapp/src/main/java/com/marand/myapplication/di/layer/remote/module/RemoteModule.kt,4\c\4c7e25cceb4d6ad98e8e0ca75df1e9c49393d6eb
 à
@@ -244,17 +240,11 @@ A
 gradle.properties,2\a\2afbb999f001938c88fa43fc2ef52abf0f8213e4
 @
 build.gradle.kts,d\b\dbcff70658daf80b53ce624f6adcaa529df5ed8d
-Y
-)buildSrc/src/main/java/AppDependencies.kt,d\8\d8b31912fed46ee3cfaea3bdcd079318a32f7d12
 Ç
 Rpresentation/src/main/java/com/marand/presentation/main/home/model/UserItemView.kt,c\0\c0a45aa92f74c97207ba0b3072d65a93e2c68c7f
 v
 Fpresentation/src/main/java/com/marand/presentation/RecyclerItemView.kt,7\3\7350dd8a62f1460edcd030d30b0963ecf5a3c683
 Å
 Qapp/src/main/java/com/marand/myapplication/ui/main/home/adapter/UserViewHolder.kt,d\1\d19290775f8b3df563023f9221d8b03f6cc48ef5
-D
-app/build.gradle.kts,d\2\d2a4383452aad84a18429a5844d31330a012a9e6
-M
-presentation/build.gradle.kts,b\b\bbb5f5d9acc7530bc591aed4f71c56457464aa34
 Ç
 Rapp/src/main/java/com/marand/myapplication/di/layer/presentation/main/MainScope.kt,b\7\b74cf4b5e8307c58d84834b50068b5c664966a90

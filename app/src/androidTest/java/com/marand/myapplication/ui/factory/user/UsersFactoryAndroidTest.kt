@@ -1,7 +1,7 @@
-package com.marand.presentation.factory.user
+package com.marand.myapplication.ui.factory.user
 
 import com.marand.domain.user.entity.UserEntity
-import com.marand.presentation.factory.DataFactoryAndroidTest
+import com.marand.myapplication.ui.factory.DataFactoryAndroidTest
 import com.marand.presentation.main.home.model.UserItemView
 
 object UsersFactoryAndroidTest {
