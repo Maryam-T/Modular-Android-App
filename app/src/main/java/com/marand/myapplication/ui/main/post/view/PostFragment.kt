@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.Toast
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import com.marand.myapplication.databinding.FragmentPostBinding
 import com.marand.myapplication.ui.AbstractFragment
@@ -20,8 +21,8 @@ class PostFragment : AbstractFragment<FragmentPostBinding>() {
     @Inject
     lateinit var viewModelProviderFactory: ViewModelProvider.Factory
 
-    private val viewModel: PostViewModel by lazy {
-        viewModelProviderFactory.create(PostViewModel::class.java)
+    private val viewModel: PostViewModel by viewModels {
+        viewModelProviderFactory
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
