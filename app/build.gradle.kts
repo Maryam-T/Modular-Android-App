@@ -2,6 +2,8 @@ plugins {
     id("com.android.application")
     kotlin("android")
     id("kotlin-kapt")
+    id("androidx.navigation.safeargs.kotlin")
+    id("kotlin-android-extensions")
 }
 
 android {
@@ -46,6 +48,9 @@ android {
         exclude("META-INF/AL2.0")
         exclude("META-INF/LGPL2.1")
     }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -63,4 +68,5 @@ dependencies {
     //Test libs
     testImplementation(AppDependencies.testLibraries)
     androidTestImplementation(AppDependencies.androidTestLibraries)
+    debugImplementation(AppDependencies.debugLibraries)
 }

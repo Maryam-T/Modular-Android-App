@@ -1,28 +1,24 @@
 package com.marand.myapplication.di.global.component
 
 import android.app.Application
-import com.marand.myapplication.App
 import com.marand.myapplication.di.global.module.AppModule
+import com.marand.myapplication.di.global.module.SubComponentsModule
 import com.marand.myapplication.di.layer.database.module.DatabaseModule
-import com.marand.myapplication.di.layer.presentation.module.ActivityBuildersModule
-import com.marand.myapplication.di.layer.presentation.module.PresentationModule
+import com.marand.myapplication.di.layer.presentation.main.component.MainComponent
 import com.marand.myapplication.di.layer.remote.module.RemoteModule
+import com.marand.myapplication.ui.AbstractActivity
 import dagger.BindsInstance
 import dagger.Component
-import dagger.android.AndroidInjectionModule
-import dagger.android.AndroidInjector
 import javax.inject.Singleton
 
 @Singleton
 @Component(modules = [
-    AndroidInjectionModule::class,
-    ActivityBuildersModule::class,
     AppModule::class,
+    SubComponentsModule::class,
     RemoteModule::class,
-    DatabaseModule::class,
-    PresentationModule::class
+    DatabaseModule::class
 ])
-interface AppComponent: AndroidInjector<App>  {
+interface AppComponent {
 
     @Component.Builder
     interface Builder {
@@ -31,4 +27,8 @@ interface AppComponent: AndroidInjector<App>  {
 
         fun build(): AppComponent
     }
+
+    fun inject(abstractActivity: AbstractActivity)
+
+    fun mainComponent(): MainComponent.Factory
 }
