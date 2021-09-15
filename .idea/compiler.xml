@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <bytecodeTargetLevel target="1.8">
+    <bytecodeTargetLevel target="1.7">
+      <module name="Modular-Android-App.buildSrc" target="1.8" />
+      <module name="MyApplication.app" target="1.8" />
+      <module name="MyApplication.data" target="1.8" />
+      <module name="MyApplication.database" target="1.8" />
+      <module name="MyApplication.domain" target="1.8" />
+      <module name="MyApplication.presentation" target="1.8" />
       <module name="MyApplication.Presentation" target="11" />
+      <module name="MyApplication.remote" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

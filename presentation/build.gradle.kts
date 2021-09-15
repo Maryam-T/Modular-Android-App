@@ -48,6 +48,7 @@ dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
     //Modules
     implementation(project(":domain"))
+    implementation(project(":log"))
     //Presentation compilers
     kapt(AppDependencies.presentationCompilers)
     //Presentation libs

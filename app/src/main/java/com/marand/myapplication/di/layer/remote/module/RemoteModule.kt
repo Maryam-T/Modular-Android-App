@@ -16,6 +16,7 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import java.io.IOException
 import javax.inject.Singleton
 
 @Module
@@ -39,8 +40,10 @@ object RemoteModule {
     @ConnectivityCheckerInterceptorQualifier
     //Checks connectivity before the every call shoots onto the network
     fun provideInternetConnectivityInterceptor(connectivityChecker: ConnectivityChecker): Interceptor =
+        // This is NOT a SAM interface
+        // https://kotlinlang.org/docs/fun-interfaces.html
         Interceptor {
-            if (!connectivityChecker.isNetworkActive()) throw NoConnectivityException()
+//            if (!connectivityChecker.isNetworkActive()) throw NoConnectivityException()
             it.proceed(it.request())
         }
 

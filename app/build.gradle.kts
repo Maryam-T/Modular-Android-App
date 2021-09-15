@@ -61,6 +61,7 @@ dependencies {
     implementation(project(":remote"))
     implementation(project(":database"))
     implementation(project(":presentation"))
+    implementation(project(":log"))
     //App compilers
     kapt(AppDependencies.appCompilers)
     //App libs
