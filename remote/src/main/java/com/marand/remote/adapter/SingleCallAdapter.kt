@@ -1,10 +1,13 @@
 package com.marand.remote.adapter
 
+import com.marand.log.Logger
 import com.marand.remote.response.ResponseWrapper
 import retrofit2.Response
 
-class SingleCallAdapter<T>(private val apiCall: suspend () -> Response<T>) :
-    CallAdapter<ResponseWrapper<T>> {
+class SingleCallAdapter<T>(
+    private val apiCall: suspend () -> Response<T>,
+    private val logger: Logger? = null
+) : CallAdapter<ResponseWrapper<T>> {
     override suspend fun execute(): ResponseWrapper<T> {
         try {
             val execute = apiCall.invoke()
@@ -22,6 +25,7 @@ class SingleCallAdapter<T>(private val apiCall: suspend () -> Response<T>) :
             }
 
         } catch (exception: Exception) {
+            logger?.error("SingleCallAdapter", exception.message.toString())
             return ResponseWrapper.Error(exception, exception.message)
         }
     }

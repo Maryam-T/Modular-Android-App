@@ -63,4 +63,6 @@ dependencies {
     //Test libs
     androidTestImplementation(AppDependencies.androidTestLibraries)
     testImplementation(AppDependencies.testLibraries)
+    //Log
+    implementation(project(":log"))
 }

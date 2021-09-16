@@ -1,5 +1,6 @@
 package com.marand.remote
 
+import com.marand.log.Logger
 import com.marand.remote.adapter.SingleCallAdapter
 import com.marand.remote.response.ResponseWrapper
 import com.marand.remote.response.Result
@@ -14,6 +15,9 @@ abstract class AbstractApiService<S> constructor(
     @Inject
     lateinit var retrofit: Retrofit
 
+    @Inject
+    lateinit var logger: Logger
+
     override val apiService: S by lazy {
         create()
     }
@@ -23,7 +27,7 @@ abstract class AbstractApiService<S> constructor(
     }
 
     protected suspend fun <T> execution(apiCall: suspend () -> Response<T>): Result<T> {
-        return when (val adapter = SingleCallAdapter(apiCall).execute()) {
+        return when (val adapter = SingleCallAdapter(apiCall, logger).execute()) {
             is ResponseWrapper.Success -> Result(adapter.data)
             is ResponseWrapper.Error -> throw  adapter.exception!!
             is ResponseWrapper.Complete -> Result()

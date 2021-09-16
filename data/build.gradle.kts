@@ -19,4 +19,6 @@ dependencies {
     kapt(AppDependencies.dataCompilers)
     //Data api
     api(AppDependencies.dataApi)
+    //Log
+    implementation(project(":log"))
 }

@@ -14,6 +14,7 @@ dependencies {
     //Modules
     implementation(project(":data"))
     implementation(project(":domain"))
+    implementation(project(":log"))
     //Remote libs
     implementation(AppDependencies.remoteLibraries)
     //Test libs

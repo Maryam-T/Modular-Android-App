@@ -23,8 +23,6 @@ _app/src/main/java/com/marand/myapplication/di/layer/remote/qualifier/KeyInterce
 capp/src/main/java/com/marand/myapplication/di/layer/remote/qualifier/LoggingInterceptorQualifier.kt,4\c\4c30b6f97d4f28e5c6f4dceedf23ff7fec939f6c
 w
 Gdatabase/src/main/java/com/marand/database/AbstractSharedPreferences.kt,1\7\176a40d1c1b8111d176ed4a53cd6d9b6d0cba197
-C
-settings.gradle.kts,7\4\749edfcc96398253e5b3416184e95c46621da850
 U
 %database/src/main/AndroidManifest.xml,5\3\53a4888515eec9d8c94b1785ab1dbca1dae723b5
 `
@@ -154,12 +152,6 @@ Xapp/src/main/java/com/marand/myapplication/di/layer/presentation/main/scope/Mai
 Wapp/src/androidTest/java/com/marand/myapplication/ui/main/post/view/PostFragmentTest.kt,1\5\150bbe9d1070b691edf1ec3cb7b99dcf47f86b50
 ‡
 Wapp/src/androidTest/java/com/marand/myapplication/ui/main/home/view/HomeFragmentTest.kt,4\3\43b4accce7e62824dc2499e4a0b279c1f5d773f7
-E
-data/build.gradle.kts,9\f\9f5470ef43fd1acab01d54a63bdece9a90dec1b7
-I
-database/build.gradle.kts,9\6\96a21acca2b2f6a76f7c9a000be3e468a108c33b
-G
-remote/build.gradle.kts,5\0\50dc545d9a1f777dcfb0f5cf8eb8ce1cfb33bc07
 k
 ;domain/src/test/java/com/marand/domain/MainCoroutineRule.kt,f\a\fae594e74057ab3c706b25beca9817a745d3751e
 t
@@ -176,8 +168,6 @@ eapp/src/main/java/com/marand/myapplication/di/layer/presentation/main/factory/M
 Rapp/src/main/java/com/marand/myapplication/di/global/module/SubComponentsModule.kt,a\8\a8361fe02aa016f583e20f285096223e55b97376
 ~
 Napp/src/main/java/com/marand/myapplication/di/global/component/AppComponent.kt,2\b\2b7c3167493f9434de04c340920505692ef6bbc8
-x
-Happ/src/main/java/com/marand/myapplication/di/global/module/AppModule.kt,9\7\97014505106f7a46309126d26be7afc2e3d294af
 a
 1app/src/main/java/com/marand/myapplication/App.kt,8\7\87bf0827180c9835f75aa39d7f1003dbcf414189
 q
@@ -200,12 +190,6 @@ a
 `presentation/src/test/java/com/marand/presentation/main/home/model/UserPresentationMapperTest.kt,9\6\96919df1f7ba80162b3e51165b67ac3562e504c1
 ƒ
 Spresentation/src/main/java/com/marand/presentation/main/home/viewmodel/UserState.kt,e\9\e94a70f4bad10d42b3e40fabfab8ec5961bd2164
-@
-build.gradle.kts,d\b\dbcff70658daf80b53ce624f6adcaa529df5ed8d
-D
-app/build.gradle.kts,d\2\d2a4383452aad84a18429a5844d31330a012a9e6
-M
-presentation/build.gradle.kts,b\b\bbb5f5d9acc7530bc591aed4f71c56457464aa34
 R
 "buildSrc/src/main/java/Versions.kt,1\7\17cc39576120ea39e86f37255d0843f33952bb99
 Y
@@ -220,8 +204,6 @@ m
 =remote/src/main/java/com/marand/remote/adapter/CallAdapter.kt,e\c\ecab47ef6cd69b81399638f47d1ab5fc5bd9d838
 ]
 -remote/src/main/java/com/marand/remote/API.kt,9\b\9b0e243e39cc699deb9d7fc3cc3f36f24122e31f
-G
-domain/build.gradle.kts,d\7\d72c8b69b8da0b3b02b699ccd509295dbd783baa
 i
 9remote/src/main/java/com/marand/remote/response/Result.kt,0\8\08188d0795865a935b46335be1e21a13b89b2107
 q
@@ -250,7 +232,3 @@ z
 Jdata/src/main/java/com/marand/data/user/datasource/UserRemoteDataSource.kt,f\6\f647a36cbd7edfc1786eaf094c40b11e0d7e642f
 q
 Aremote/src/main/java/com/marand/remote/user/api/UserApiService.kt,5\7\57d9640f189a31a01970783ee0032a06b957cc9a
-l
-<remote/src/main/java/com/marand/remote/AbstractApiService.kt,6\4\648b1ab6a7b872d1827873012fc5344c2aa72499
-s
-Cremote/src/main/java/com/marand/remote/adapter/SingleCallAdapter.kt,2\8\28a25b61d1ec50df83375214ed232ff4aac8d1b2

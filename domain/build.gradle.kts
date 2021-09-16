@@ -15,4 +15,6 @@ dependencies {
     implementation(AppDependencies.domainLibraries)
     //Test libs
     testImplementation(AppDependencies.testLibraries)
+    //Log
+    implementation(project(":log"))
 }
