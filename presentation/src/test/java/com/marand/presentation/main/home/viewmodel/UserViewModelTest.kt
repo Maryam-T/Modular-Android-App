@@ -2,16 +2,14 @@ package com.marand.presentation.main.home.viewmodel
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.Observer
-import com.marand.domain.UseCase
+import com.marand.domain.UseCaseResponse
 import com.marand.domain.UseCaseResult
 import com.marand.domain.user.entity.UserEntity
 import com.marand.domain.user.interactor.GetUserListUseCase
 import com.marand.presentation.factory.user.UsersFactory
 import com.marand.presentation.main.home.model.UserItemView
 import com.marand.presentation.main.home.model.UserPresentationMapper
-import io.mockk.coEvery
-import io.mockk.coVerify
-import io.mockk.mockk
+import io.mockk.*
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import org.junit.After
 import org.junit.Before
@@ -59,7 +57,8 @@ class UserViewModelTest {
         listOfUsers.forEach {
             listOfViews.add(userPresentationMapper.toPresentation(it))
         }
-        stubFetchUsers(UseCaseResult(listOfUsers))
+
+        stubFetchUsers(UseCaseResponse(onSuccess = {UseCaseResult(listOfUsers)}))
 
         //Act
         userViewModel.fetchUserList()
@@ -73,7 +72,7 @@ class UserViewModelTest {
     /**
      * Stub Helpers Methods
      */
-    private fun stubFetchUsers(response: UseCaseResult<List<UserEntity>>) {
-        coEvery { getUserListUseCase.run(UseCase.None()) } returns response
+    private fun stubFetchUsers(response: UseCaseResponse<List<UserEntity>>) {
+//        coEvery { getUserListUseCase.invoke(UseCase.None()) } returns response
     }
 }

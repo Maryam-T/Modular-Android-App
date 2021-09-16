@@ -49,8 +49,6 @@ object AppDependencies {
         "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutinesVersion}"
     const val coroutinesAndroid =
         "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutinesVersion}"
-    const val coroutineTest =
-        "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.coroutinesVersion}"
     const val coroutineCallAdapter = "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:${Versions.coroutineAdapterVersion}"
 
     //Rx
@@ -86,6 +84,7 @@ object AppDependencies {
     private const val rule = "androidx.test:rules:${Versions.rulesVersion}"
     private const val runner = "androidx.test:runner:${Versions.rulesVersion}"
     private const val mockk = "io.mockk:mockk:${Versions.mockk}"
+    private const val coroutineTest = "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.coroutinesVersion}"
 
     val appLibraries = arrayListOf<String>().apply {
         add(kotlinStd)
@@ -224,7 +223,6 @@ object AppDependencies {
         add(mockitoInline)
         add(truth)
         add(coroutineTest)
-        add(coroutines)/////////////////
         add(mockk)
     }
 

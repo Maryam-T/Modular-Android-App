@@ -39,5 +39,5 @@ object Versions {
     const val mockitoInline = "2.13.0"
     const val arch = "2.0.0"
     const val truth = "1.0.1"
-    const val mockk = "1.9"
+    const val mockk = "1.10.0"
 }

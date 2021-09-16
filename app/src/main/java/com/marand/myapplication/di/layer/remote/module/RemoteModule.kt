@@ -1,5 +1,6 @@
 package com.marand.myapplication.di.layer.remote.module
 
+import android.util.Log
 import com.google.gson.Gson
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import com.marand.myapplication.BuildConfig
@@ -40,7 +41,9 @@ object RemoteModule {
     //Checks connectivity before the every call shoots onto the network
     fun provideInternetConnectivityInterceptor(connectivityChecker: ConnectivityChecker): Interceptor =
         Interceptor {
-            if (!connectivityChecker.isNetworkActive()) throw NoConnectivityException()
+            if (!connectivityChecker.isNetworkActive()){
+                throw NoConnectivityException()
+            }
             it.proceed(it.request())
         }
 
